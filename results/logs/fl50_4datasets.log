@@ -1,0 +1,96 @@
+
+==============================================================================
+Executing 50-Round Cross-Dataset FL Suite Across All 4 Datasets & Families
+Settings: Rounds=50, Onset=20, Sites=10, Dirichlet alpha=0.5
+==============================================================================
+
+==================== DATASET: CSE-CIC-IDS2018 (cleaned_cic2018) ====================
+
+>>> Running 50 FL Rounds for [CSE-CIC-IDS2018] Zero-Day [Botnet] (seed=42)...
+2026-10-27 10:22:29,547 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Botnet). Mean site train samples: 7638
+    Completed in 43.4s | tau_0.80 = 0.0 rounds | peak recall = 0.956 | final recall = 0.956
+
+>>> Running 50 FL Rounds for [CSE-CIC-IDS2018] Zero-Day [Infiltration] (seed=42)...
+2026-10-27 10:23:11,052 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Infiltration). Mean site train samples: 7637
+    Completed in 43.6s | tau_0.80 = 0.0 rounds | peak recall = 0.989 | final recall = 0.933
+
+>>> Running 50 FL Rounds for [CSE-CIC-IDS2018] Zero-Day [FTP-BruteForce] (seed=42)...
+2026-10-27 10:23:54,764 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=FTP-BruteForce). Mean site train samples: 6884
+    Completed in 72.2s | tau_0.80 = 30.0 rounds | peak recall = 0.267 | final recall = 0.248
+
+>>> Running 50 FL Rounds for [CSE-CIC-IDS2018] Zero-Day [DoS/DDoS] (seed=42)...
+2026-10-27 10:25:06,908 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=DoS/DDoS). Mean site train samples: 6183
+    Completed in 94.5s | tau_0.80 = 30.0 rounds | peak recall = 0.156 | final recall = 0.122
+
+==================== DATASET: ToN-IoT (cleaned_ton_iot) ====================
+
+>>> Running 50 FL Rounds for [ToN-IoT] Zero-Day [Scanning / Recon] (seed=42)...
+2026-10-27 10:26:41,087 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Scanning / Recon). Mean site train samples: 3957
+    Completed in 49.8s | tau_0.80 = 30.0 rounds | peak recall = 0.089 | final recall = 0.023
+
+>>> Running 50 FL Rounds for [ToN-IoT] Zero-Day [Ransomware / Backdoor] (seed=42)...
+2026-10-27 10:27:30,887 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Ransomware / Backdoor). Mean site train samples: 3850
+    Completed in 53.8s | tau_0.80 = 30.0 rounds | peak recall = 0.413 | final recall = 0.413
+
+>>> Running 50 FL Rounds for [ToN-IoT] Zero-Day [DoS / DDoS] (seed=42)...
+2026-10-27 10:28:24,788 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=DoS / DDoS). Mean site train samples: 4192
+    Completed in 48.1s | tau_0.80 = 0.0 rounds | peak recall = 0.833 | final recall = 0.819
+
+==================== DATASET: UNSW-NB15 (cleaned_unsw_nb15) ====================
+
+>>> Running 50 FL Rounds for [UNSW-NB15] Zero-Day [Exploits] (seed=42)...
+2026-10-27 10:29:12,840 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Exploits). Mean site train samples: 5561
+    Completed in 60.5s | tau_0.80 = 17.0 rounds | peak recall = 0.847 | final recall = 0.846
+
+>>> Running 50 FL Rounds for [UNSW-NB15] Zero-Day [Fuzzers] (seed=42)...
+2026-10-27 10:30:13,364 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Fuzzers). Mean site train samples: 6101
+    Completed in 44.6s | tau_0.80 = 30.0 rounds | peak recall = 0.800 | final recall = 0.483
+
+>>> Running 50 FL Rounds for [UNSW-NB15] Zero-Day [DoS] (seed=42)...
+2026-10-27 10:30:57,935 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=DoS). Mean site train samples: 6259
+    Completed in 37.5s | tau_0.80 = 0.0 rounds | peak recall = 0.997 | final recall = 0.934
+
+>>> Running 50 FL Rounds for [UNSW-NB15] Zero-Day [Reconnaissance] (seed=42)...
+2026-10-27 10:31:35,453 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Reconnaissance). Mean site train samples: 6307
+    Completed in 35.6s | tau_0.80 = 0.0 rounds | peak recall = 0.926 | final recall = 0.880
+
+>>> Running 50 FL Rounds for [UNSW-NB15] Zero-Day [Generic] (seed=42)...
+2026-10-27 10:32:11,060 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Generic). Mean site train samples: 5077
+    Completed in 71.9s | tau_0.80 = 0.0 rounds | peak recall = 0.995 | final recall = 0.990
+
+==================== DATASET: NSL-KDD (cleaned_nsl_kdd) ====================
+
+>>> Running 50 FL Rounds for [NSL-KDD] Zero-Day [DoS] (seed=42)...
+2026-10-27 10:33:23,155 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=DoS). Mean site train samples: 6403
+    Completed in 139.0s | tau_0.80 = 0.0 rounds | peak recall = 0.897 | final recall = 0.888
+
+>>> Running 50 FL Rounds for [NSL-KDD] Zero-Day [Probe] (seed=42)...
+2026-10-27 10:35:42,067 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=Probe). Mean site train samples: 9145
+    Completed in 60.8s | tau_0.80 = 30.0 rounds | peak recall = 0.397 | final recall = 0.385
+
+>>> Running 50 FL Rounds for [NSL-KDD] Zero-Day [R2L] (seed=42)...
+2026-10-27 10:36:42,846 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=R2L). Mean site train samples: 9998
+    Completed in 38.2s | tau_0.80 = 30.0 rounds | peak recall = 0.735 | final recall = 0.355
+
+>>> Running 50 FL Rounds for [NSL-KDD] Zero-Day [U2R] (seed=42)...
+2026-10-27 10:37:21,070 [INFO] Partitioned dataset into 10 sites (skew=0.5, zero_day=U2R). Mean site train samples: 10073
+    Completed in 32.5s | tau_0.80 = 30.0 rounds | peak recall = 0.979 | final recall = 0.628
+
+[Artifact Created] Cross-Dataset Summary saved to results/metrics/fl50_4datasets_summary.csv
+        dataset          macro_family  seed  rounds  injection_round  tau_0.80_rounds  final_non_origin_recall  peak_non_origin_recall  aupc_20  catastrophic_forgetting  runtime_seconds
+CSE-CIC-IDS2018                Botnet    42      50               20              0.0                   0.9558                  0.9564   0.9494                   0.0000            43.44
+CSE-CIC-IDS2018          Infiltration    42      50               20              0.0                   0.9327                  0.9889   0.9353                   0.0068            43.65
+CSE-CIC-IDS2018        FTP-BruteForce    42      50               20             30.0                   0.2483                  0.2673   0.2526                   0.0000            72.17
+CSE-CIC-IDS2018              DoS/DDoS    42      50               20             30.0                   0.1224                  0.1561   0.1393                   0.0000            94.51
+        ToN-IoT      Scanning / Recon    42      50               20             30.0                   0.0229                  0.0885   0.0246                   0.0000            49.80
+        ToN-IoT Ransomware / Backdoor    42      50               20             30.0                   0.4134                  0.4134   0.3076                   0.0000            53.84
+        ToN-IoT            DoS / DDoS    42      50               20              0.0                   0.8192                  0.8333   0.8108                   0.0000            48.06
+      UNSW-NB15              Exploits    42      50               20             17.0                   0.8459                  0.8466   0.7578                   0.0000            60.52
+      UNSW-NB15               Fuzzers    42      50               20             30.0                   0.4830                  0.7998   0.5179                   0.0000            44.58
+      UNSW-NB15                   DoS    42      50               20              0.0                   0.9336                  0.9972   0.9437                   0.0228            37.47
+      UNSW-NB15        Reconnaissance    42      50               20              0.0                   0.8802                  0.9259   0.8887                   0.0000            35.62
+      UNSW-NB15               Generic    42      50               20              0.0                   0.9901                  0.9948   0.9858                   0.0295            71.91
+        NSL-KDD                   DoS    42      50               20              0.0                   0.8880                  0.8971   0.8654                   0.0000           139.01
+        NSL-KDD                 Probe    42      50               20             30.0                   0.3851                  0.3968   0.2925                   0.0000            60.77
+        NSL-KDD                   R2L    42      50               20             30.0                   0.3552                  0.7349   0.3655                   0.0000            38.19
+        NSL-KDD                   U2R    42      50               20             30.0                   0.6282                  0.9786   0.6090                   0.0000            32.52

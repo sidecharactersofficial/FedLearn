@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Comparison with related leakage and federated intrusion detection literature.}
+\label{tab:related_work}
+\begin{tabular}{lp{2.4cm}p{2.6cm}p{2.6cm}p{2.2cm}p{3.2cm}}
+\toprule
+\textbf{Work} & \textbf{Domain} & \textbf{Adversary} & \textbf{Inference Goal} & \textbf{Defenses Studied} & \textbf{Addresses Event Attribution?} \\
+\midrule
+Melis et al.~\cite{melis2019} & Images / Text & Passive Participant & Property \& Membership & DP, Compression & \textbf{No} (Static property inference; no temporal zero-day attribution) \\
+Hu et al. (SIA)~\cite{hu2021} & Synthetic / Real & Honest-but-Curious Server & Per-sample Source Membership & None & \textbf{Partial} (Sample-level, no zero-day timing, no peer adversary) \\
+Zhu et al. (DLG)~\cite{zhu2019} & Vision & Aggregation Server & Data Reconstruction & Noise, Clipping & \textbf{No} (Sample reconstruction; not origin organizational attribution) \\
+Marchand et al.~\cite{marchand2023} & Vision & Server vs. SecAgg & Client Re-identification & SecAgg Analysis & \textbf{Partial} (Re-identification under SecAgg; no IDS propagation) \\
+Popoola / FLEX-IDS~\cite{popoola2022} & Network Flows & None (Defenders) & Flow Classification & Federation only & \textbf{No} (Assumes FL is inherently private; ignores attribution leakage) \\
+\midrule
+\textbf{Ours (FedIDS)} & \textbf{Tabular IDS Flows} & \textbf{Server (SecAgg) \& Curious Peer} & \textbf{Zero-Day Origin Site \& Onset Timing ($t_0$)} & \textbf{Client DP, Delay, Quorum Escrow} & \textbf{Yes} (Full Pareto speed--leakage frontier on non-IID consortia) \\
+\bottomrule
+\end{tabular}
+\end{table*}

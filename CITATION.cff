@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: >-
+  If you use this artifact, please cite the associated paper:
+  "Who Saw It First: Zero-Day Propagation and Attribution Leakage in Federated Intrusion Detection".
+title: "Who Saw It First: Zero-Day Propagation and Attribution Leakage in Federated Intrusion Detection — Reproducibility Artifact"
+abstract: >-
+  Artifact package for the IEEE Symposium on Security and Privacy (S&P) paper
+  "Who Saw It First: Zero-Day Propagation and Attribution Leakage in Federated Intrusion Detection".
+  Contains cross-silo federated learning simulation harnesses, shadow-federation
+  meta-classifiers, defensive evaluations (SecAgg, Client DP, Quorum Escrow),
+  machine-checked Lean 4 formal proofs for all 9 theoretical results, preprocessed
+  intrusion detection benchmarks, and automated verification tooling.
+authors:
+  - name: "Anonymous"
+    affiliation: "Redacted for double-blind peer review"
+version: 1.0.0
+date-released: 2026-11-01
+license: MIT
+repository-code: "https://anonymous.4open.science/r/who-saw-it-first-flids"
+keywords:
+  - federated learning
+  - network intrusion detection
+  - privacy leakage
+  - origin attribution
+  - zero-day attacks
+  - secure aggregation
+  - formal verification
+  - lean 4

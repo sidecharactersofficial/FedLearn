@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Experimental parameters and evaluation grid.}
+\label{tab:parameters}
+\begin{tabular}{p{2.6cm}p{5.4cm}}
+
+\toprule
+\textbf{Parameter Category} & \textbf{Values / Configurations} \\
+\midrule
+Flow Dataset & CSE-CIC-IDS2018 (Sanitized, 66 numerical features) \\
+Macro-Attack Families & Infiltration (zero-day $f^*$), Botnet, FTP-BruteForce, DoS/DDoS, Benign \\
+Consortium Sites ($N$) & $5, 10, 20$ (Default $N=10$) \\
+Non-IID Skew ($\alpha$) & $\text{Dir}_N(\alpha)$ with $\alpha \in \{0.1, 0.5, 1.0, 10.0\}$ (Default $\alpha=0.5$) \\
+Local Training & $E = 1$ epoch, Adam optimizer, lr $= 10^{-3}$, batch size $= 64$ \\
+Federation Protocols & FedAvg, FedProx ($\mu=0.01$), FedAdam, FedYogi \\
+Zero-Day Injection & Onset round $t_0 \in [10, 15]$, injection intensity $\gamma \in [0.05, 0.15]$ \\
+Attribution Adversaries & Server (Unprotected), Server (SecAgg simulated), Curious Peer \\
+Attribution Modes & Forensic (family known), Real-time Surrogate (unseen surrogate pool) \\
+Attribution Models & Head 1: Multi-class XGBoost (Top-1, Top-3); Head 2: Huber XGBoost (MAE) \\
+Evaluated Defenses & Client DP ($\varepsilon \in \{1, 2, 5, 10\}$, $C=1.0$, $\delta=10^{-5}$), Delay ($d \in \{1, 3, 5, 10\}$), Quorum ($k \in \{2, 3, 5\}$) \\
+Operational Ablations & SOC Label Delay ($\Delta t_{\text{SOC}} \in \{2, 5\}$), Unlabeled AE, Concurrent ($m \in \{2, 3\}$), Concept Drift \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Robustness under operational perturbations (Section 5.5): propagation speed ($\tau_{0.80}$), origin attribution accuracy (Top-1 \%), timing error (MAE), and utility ($F_1$). Mean $\pm$ 95\% CI.}
+\label{tab:robustness}
+\begin{tabular}{llcccc}
+\toprule
+Operational Perturbation & Setting & $\tau_{0.80}$ (rnd) & Top-1 Acc (\%) & Timing MAE (rnd) & Known $F_1$ \\
+\midrule
+Background Concept Drift & Benign shift (delta=0.02/rnd) & 1.6 ± 3.8 & 46.8 ± 2.1 & 2.88 ± 0.61 & 0.925 ± 0.000 \\
+Concurrent Distinct Zero-Days & Infiltration + Botnet & 1.6 ± 3.8 & 42.5 ± 2.7 & 2.36 ± 0.50 & 0.948 ± 0.000 \\
+Concurrent Same-Family & m = 2 sites & 1.6 ± 3.8 & 30.6 ± 1.4 & 1.85 ± 0.53 & 0.955 ± 0.000 \\
+Concurrent Same-Family & m = 3 sites & 1.6 ± 3.8 & 21.7 ± 2.6 & 1.98 ± 0.42 & 0.955 ± 0.000 \\
+Reference (No Perturbation) & Default & 1.6 ± 3.8 & 54.0 ± 1.7 & 1.87 ± 0.53 & 0.958 ± 0.000 \\
+SOC Label Delay & $\Delta t_{\text{SOC}}$ = 2 rnds & 2.6 ± 4.6 & 47.4 ± 1.7 & 3.61 ± 0.48 & 0.952 ± 0.000 \\
+SOC Label Delay & $\Delta t_{\text{SOC}}$ = 5 rnds & 4.4 ± 6.1 & 39.0 ± 2.8 & 6.21 ± 0.44 & 0.952 ± 0.000 \\
+Unlabeled Autoencoder & AE+MLP (MSE signal) & 1.6 ± 3.8 & 60.7 ± 1.9 & 1.23 ± 0.18 & 0.938 ± 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,18 @@
+\begin{table}[t]
+\caption{Federation scalability ($N \in \{10, 20, 50, 100\}$ clients, $\alpha=0.5$): Origin attribution accuracy, subgroup localization, zero-day propagation delay ($\tau_{0.80}$), and per-round communication overhead (mean $\pm$ 95\% CI).}
+\label{tab:scalability}
+\begin{center}
+\scriptsize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+\textbf{Clients} & \textbf{Random} & \textbf{Server Top-1} & \textbf{Peer Top-1} & \textbf{Subgroup} & $\tau_{0.80}$ & \textbf{Bandwidth} \\
+($N$) & \textbf{Guess} & \textbf{(No SecAgg)} & \textbf{(SecAgg)} & \textbf{Acc. (Top-$k$)} & \textbf{(Rounds)} & \textbf{(MB/Rnd)} \\
+\midrule
+10  & 10.0\% & $96.4 \pm 1.2\%$ & $61.4 \pm 3.0\%$ & $87.2 \pm 2.2\%$ ($k=3$) & $4.5 \pm 0.4$ & 0.69 \\
+20  & 5.0\%  & $94.1 \pm 1.5\%$ & $38.2 \pm 2.8\%$ & $68.4 \pm 2.6\%$ ($k=3$) & $4.9 \pm 0.5$ & 1.38 \\
+50  & 2.0\%  & $88.4 \pm 2.1\%$ & $19.6 \pm 2.4\%$ & $54.2 \pm 3.1\%$ ($k=5$) & $5.8 \pm 0.6$ & 3.46 \\
+100 & 1.0\%  & $85.7 \pm 2.3\%$ & $11.4 \pm 2.1\%$ & $49.8 \pm 3.4\%$ ($k=10$) & $7.1 \pm 0.7$ & 6.91 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}

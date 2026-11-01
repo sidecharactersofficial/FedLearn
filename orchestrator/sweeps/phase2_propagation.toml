@@ -1,0 +1,19 @@
+# Phase 2 Propagation Sweeps (Fig. 1a and 1b)
+# Expands to Cartesian product: seeds x num_sites x skew x defenses
+name = "propagation"
+dataset = "cleaned_cic2018"
+rounds = 30
+local_epochs = 1
+client_sampling_rate = 1.0
+aggregator = "fedavg"          # fedavg | fedprox | fedadam | fedyogi
+zero_day_family = "Infiltration"
+origin_site = 0
+injection_round = 10
+label_delay_rounds = 0
+
+seeds = [42, 43, 44]
+num_sites = [5, 10]
+skew = [0.1, 0.5, 1.0, 10.0]
+
+[[defenses]]
+kind = "none"

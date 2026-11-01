@@ -1,0 +1,35 @@
+{
+  "experiment_id": "E-EXP03-DEFENSE-PARETO-TABLE4",
+  "experiment_number": 3,
+  "claim": "C3",
+  "description": "Speed-leakage Pareto frontier evaluation across SecAgg, Client DP (eps in {1,2,5,10}), Delay (d=3), and Quorum (k in {2,3}).",
+  "datasets": [
+    {
+      "name": "CSE-CIC-IDS2018",
+      "path": "datasets/processed/cleaned_cic2018.parquet"
+    }
+  ],
+  "configuration": {
+    "rounds": 30,
+    "seeds": 5,
+    "defenses": [
+      "SecAgg",
+      "DP_eps10",
+      "DP_eps5",
+      "DP_eps2",
+      "DP_eps1",
+      "Delay_d3",
+      "Quorum_k2",
+      "Quorum_k3"
+    ]
+  },
+  "expected_output": "results/metrics/defense_pareto_results.csv; results/tables/table_defense_tradeoff.tex; results/figures/fig_tradeoff.pdf",
+  "expected_properties": {
+    "dp_eps2_tau_080": 12.4,
+    "dp_eps1_tau_080": "inf",
+    "quorum_k2_top1_acc": 28.5,
+    "quorum_k3_top1_acc": 19.2
+  },
+  "reproducibility_level": "R3",
+  "script": "scripts/run_fig2_defenses.sh"
+}

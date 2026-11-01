@@ -1,0 +1,28 @@
+{
+  "experiment_id": "E-EXP06-SCALABILITY-N50-N100",
+  "experiment_number": 6,
+  "claim": "C4",
+  "description": "Origin attribution scaling as federation size expands to N=50 and N=100.",
+  "datasets": [
+    {
+      "name": "CSE-CIC-IDS2018",
+      "path": "datasets/processed/cleaned_cic2018.parquet"
+    }
+  ],
+  "configuration": {
+    "N_values": [
+      10,
+      50,
+      100
+    ],
+    "alpha": 0.5
+  },
+  "expected_output": "results/metrics/scalability_results.csv; results/tables/table_scalability.tex",
+  "expected_properties": {
+    "n50_server_top1": 88.4,
+    "n50_peer_top1": 19.6,
+    "n100_peer_top1": 11.4
+  },
+  "reproducibility_level": "R3",
+  "script": "scripts/run_sec5_5_robustness.sh"
+}

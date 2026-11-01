@@ -1,0 +1,29 @@
+=================================================================
+Phase 5: Section 5.5 Operational Perturbations & Robustness
+=================================================================
+Invoking R statistical analysis & LaTeX table generation...
+
+========================================================================================
+Section 5.5: Operational Perturbations & Robustness Table (Mean ± 95% CI)
+========================================================================================
+                   perturbation                       setting Tau_Formatted
+1      Background Concept Drift Benign shift (delta=0.02/rnd)     1.6 ± 3.8
+2 Concurrent Distinct Zero-Days         Infiltration + Botnet     1.6 ± 3.8
+3        Concurrent Same-Family                   m = 2 sites     1.6 ± 3.8
+4        Concurrent Same-Family                   m = 3 sites     1.6 ± 3.8
+5   Reference (No Perturbation)                       Default     1.6 ± 3.8
+6               SOC Label Delay          Delta t_SOC = 2 rnds     2.6 ± 4.6
+7               SOC Label Delay          Delta t_SOC = 5 rnds     4.4 ± 6.1
+8         Unlabeled Autoencoder           AE+MLP (MSE signal)     1.6 ± 3.8
+  Top1_Formatted MAE_Formatted  F1_Formatted
+1     46.8 ± 2.1   2.88 ± 0.61 0.925 ± 0.000
+2     42.5 ± 2.7   2.36 ± 0.50 0.948 ± 0.000
+3     30.6 ± 1.4   1.85 ± 0.53 0.955 ± 0.000
+4     21.7 ± 2.6   1.98 ± 0.42 0.955 ± 0.000
+5     54.0 ± 1.7   1.87 ± 0.53 0.958 ± 0.000
+6     47.4 ± 1.7   3.61 ± 0.48 0.952 ± 0.000
+7     39.0 ± 2.8   6.21 ± 0.44 0.952 ± 0.000
+8     60.7 ± 1.9   1.23 ± 0.18 0.938 ± 0.000
+========================================================================================
+Wrote LaTeX robustness table to analysis/output/table_sec5_5_robustness.tex and results/tables/table_sec5_5_robustness.tex
+Phase 5 completed successfully.

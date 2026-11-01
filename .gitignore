@@ -1,0 +1,47 @@
+# Environment
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# Keep the template
+!.env.example
+
+# Data and run outputs (immutable raw data is tracked by checksum, not by git)
+datasets/raw/*
+datasets/processed/*
+runs/*
+!datasets/raw/.gitkeep
+!datasets/processed/.gitkeep
+!runs/.gitkeep
+
+# Generated protobuf bindings (rebuild with: make proto)
+worker/src/fedids_worker/gen/*
+!worker/src/fedids_worker/gen/__init__.py
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Rust
+orchestrator/target/
+
+# R
+analysis/.Rproj.user/
+.Rhistory
+
+# LaTeX & Paper (kept away from artifact distribution)
+paper/
+paper/**
+
+# R outputs
+analysis/output/*
+!analysis/output/.gitkeep
+arrow.out
+
+# Archives
+*.zip
+

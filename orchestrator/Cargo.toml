@@ -1,0 +1,18 @@
+[package]
+name = "fedids-orchestrator"
+version = "0.1.0"
+edition = "2021"
+description = "Experiment orchestration: sweeps, run supervision, result collection"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+prost = "0.13"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[build-dependencies]
+prost-build = "0.13"
+protoc-bin-vendored = "3"

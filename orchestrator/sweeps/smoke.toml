@@ -1,0 +1,19 @@
+# Human-authored sweep spec. The orchestrator expands it into RunConfig
+# protobuf messages (the actual contract with the Python worker).
+name = "smoke"
+dataset = "synthetic"
+rounds = 8
+local_epochs = 1
+client_sampling_rate = 1.0
+aggregator = "fedavg"          # fedavg | fedprox | fedadam
+zero_day_family = "placeholder"
+origin_site = 0
+injection_round = 2
+label_delay_rounds = 0
+
+seeds = [1, 2]
+num_sites = [4]
+skew = [0.5]
+
+[[defenses]]
+kind = "none"                  # none | secure_aggregation | client_dp | delayed_release | thresholded_release

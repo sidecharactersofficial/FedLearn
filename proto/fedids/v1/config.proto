@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package fedids.v1;
+
+// Contract: Rust orchestrator -> Python worker.
+// Rules: never reuse a field number; add new fields with new numbers;
+// breaking changes require a new package version (fedids.v2).
+
+enum Aggregator {
+  AGGREGATOR_UNSPECIFIED = 0;
+  AGGREGATOR_FEDAVG = 1;
+  AGGREGATOR_FEDPROX = 2;
+  AGGREGATOR_FEDADAM = 3;
+  AGGREGATOR_FEDYOGI = 4;
+}
+
+
+enum DefenseKind {
+  DEFENSE_KIND_UNSPECIFIED = 0;
+  DEFENSE_KIND_NONE = 1;
+  DEFENSE_KIND_SECURE_AGGREGATION = 2;
+  DEFENSE_KIND_CLIENT_DP = 3;
+  DEFENSE_KIND_DELAYED_RELEASE = 4;
+  DEFENSE_KIND_THRESHOLDED_RELEASE = 5;
+}
+
+message DatasetConfig {
+  string name = 1;           // e.g. "cic-ids2017"
+  string raw_dir = 2;        // immutable source data
+  string processed_dir = 3;  // cleaned / normalized data
+  double skew = 4;           // non-IID degree across sites
+}
+
+message FederationConfig {
+  uint32 num_sites = 1;
+  uint32 rounds = 2;
+  uint32 local_epochs = 3;
+  double client_sampling_rate = 4;  // (0, 1]
+  Aggregator aggregator = 5;
+}
+
+message ZeroDayConfig {
+  string family = 1;               // held-out attack family
+  uint32 origin_site = 2;          // site that sees it first
+  uint32 injection_round = 3;
+  uint32 label_delay_rounds = 4;   // 0 = labeled immediately
+}
+
+message DefenseConfig {
+  DefenseKind kind = 1;
+  double epsilon = 2;              // privacy budget (client DP)
+  double delta = 3;
+  double clip_norm = 4;
+  uint32 release_delay_rounds = 5;     // delayed release
+  uint32 release_threshold_sites = 6;  // thresholded release
+}
+
+message RunConfig {
+  string run_id = 1;
+  uint64 seed = 2;
+  DatasetConfig dataset = 3;
+  FederationConfig federation = 4;
+  ZeroDayConfig zero_day = 5;
+  DefenseConfig defense = 6;
+  string output_dir = 7;  // runs/<run_id>
+}

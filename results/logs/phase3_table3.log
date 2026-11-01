@@ -1,0 +1,19 @@
+==========================================================
+Phase 3: Shadow Federations & Origin Attribution Attacks
+==========================================================
+Invoking R statistical analysis for Table 3...
+
+========================================================================================
+Table 3: Attack Success: Origin Attribution & Timing Error (Mean ± 95% CI)
+========================================================================================
+                 regime        mode Top1_Formatted Top3_Formatted MAE_Formatted
+1    Server (No SecAgg)    Forensic      0.0 ± 0.0    10.0 ± 22.6   1.16 ± 0.62
+2    Server (No SecAgg)   Surrogate      0.0 ± 0.0      0.0 ± 0.0   1.35 ± 0.62
+3       Server (SecAgg)    Forensic      0.0 ± 0.0    10.0 ± 22.6   1.58 ± 0.80
+4       Server (SecAgg)   Surrogate    10.0 ± 22.6    20.0 ± 30.2   0.97 ± 0.70
+5           Peer Client    Forensic      0.0 ± 0.0    30.0 ± 34.6   1.46 ± 0.77
+6           Peer Client   Surrogate    10.0 ± 22.6    20.0 ± 30.2   0.66 ± 0.51
+7 Random Guess Baseline Theoretical     10.0 ± 0.0     30.0 ± 0.0  12.50 ± 0.00
+========================================================================================
+Wrote LaTeX table to analysis/output/table3_attack_success.tex and results/tables/table3_attack_success.tex
+Phase 3 Table 3 Suite completed successfully.

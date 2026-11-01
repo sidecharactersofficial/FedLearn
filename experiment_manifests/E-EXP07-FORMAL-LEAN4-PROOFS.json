@@ -1,0 +1,19 @@
+{
+  "experiment_id": "E-EXP07-FORMAL-LEAN4-PROOFS",
+  "experiment_number": 7,
+  "claim": "C5",
+  "description": "Machine-checked formal proofs in Lean 4 verifying all 9 theorems, lemmas, propositions, and corollaries.",
+  "datasets": [],
+  "configuration": {
+    "lean_version": "4.15.0",
+    "axioms": 0,
+    "sorrys": 0
+  },
+  "expected_output": "leanproofs/MATH_AUDIT_REPORT.md; leanproofs/.lake/build/bin/fedlearn_proofs",
+  "expected_properties": {
+    "theorems_proved": 9,
+    "verification_tests_passed": 9
+  },
+  "reproducibility_level": "R4",
+  "script": "make verify-proofs"
+}

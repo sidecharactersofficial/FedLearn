@@ -1,0 +1,32 @@
+{
+  "experiment_id": "E-EXP04-ROBUSTNESS-STRESS-TABLE5",
+  "experiment_number": 4,
+  "claim": "C4",
+  "description": "Robustness of origin and timing inference under operational friction (SOC delay, Unsupervised AE, Concurrent outbreaks, Concept drift).",
+  "datasets": [
+    {
+      "name": "CSE-CIC-IDS2018",
+      "path": "datasets/processed/cleaned_cic2018.parquet"
+    }
+  ],
+  "configuration": {
+    "rounds": 30,
+    "seeds": 5,
+    "stress_scenarios": [
+      "SOC_Delay_2",
+      "SOC_Delay_5",
+      "Unlabeled_AE",
+      "Concurrent_m3",
+      "Concept_Drift"
+    ]
+  },
+  "expected_output": "results/metrics/sec5_5_robustness_results.csv; results/tables/table_sec5_5_robustness.tex",
+  "expected_properties": {
+    "soc_delay_5_tau_080": 9.5,
+    "unlabeled_ae_top1_acc": 60.7,
+    "concurrent_m3_top1_acc": 21.7,
+    "concept_drift_timing_mae": 2.88
+  },
+  "reproducibility_level": "R3",
+  "script": "scripts/run_sec5_5_robustness.sh"
+}

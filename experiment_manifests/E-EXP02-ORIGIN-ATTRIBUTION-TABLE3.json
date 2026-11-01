@@ -1,0 +1,31 @@
+{
+  "experiment_id": "E-EXP02-ORIGIN-ATTRIBUTION-TABLE3",
+  "experiment_number": 2,
+  "claim": "C2",
+  "description": "Shadow-federation meta-classifier origin attribution (o) and compromise onset timing (t0) inference across views.",
+  "datasets": [
+    {
+      "name": "CSE-CIC-IDS2018",
+      "path": "datasets/processed/cleaned_cic2018.parquet"
+    }
+  ],
+  "configuration": {
+    "seeds": 10,
+    "shadow_federations": 20,
+    "rounds": 25,
+    "models": [
+      "XGBoost",
+      "HuberRegressor"
+    ]
+  },
+  "expected_output": "results/metrics/table3_results.csv; results/tables/table3_attack_success.tex; results/figures/fig_confusion_matrix_single.pdf",
+  "expected_properties": {
+    "server_forensic_top1_acc": 96.4,
+    "server_online_top1_acc": 84.1,
+    "secagg_forensic_top1_acc": 61.4,
+    "secagg_online_top1_acc": 58.2,
+    "timing_mae_rounds": 0.61
+  },
+  "reproducibility_level": "R3",
+  "script": "scripts/run_table3_suite.sh"
+}

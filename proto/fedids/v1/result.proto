@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package fedids.v1;
+
+// Contract: Python worker -> Rust orchestrator (and the artifact record).
+// Large data (updates, weights, per-round metrics) lives in files and is
+// referenced by path here, never embedded.
+
+enum RunStatus {
+  RUN_STATUS_UNSPECIFIED = 0;
+  RUN_STATUS_SUCCEEDED = 1;
+  RUN_STATUS_FAILED = 2;
+}
+
+message RunResult {
+  string run_id = 1;
+  RunStatus status = 2;
+  string metrics_path = 3;         // Parquet, read by the R analysis
+  string updates_dir = 4;          // per-round update files, if recorded
+  map<string, double> summary = 5; // headline numbers
+  string git_commit = 6;
+  string image_digest = 7;
+  string error_message = 8;
+  string meta_path = 9;            // Parquet: flattened RunConfig, one row
+}
+
+// One row of metrics.parquet (documents the Parquet schema).
+message RoundMetric {
+  string run_id = 1;
+  uint32 round = 2;
+  int32 site = 3;      // -1 means global
+  string metric = 4;   // e.g. "zero_day_recall"
+  double value = 5;
+}

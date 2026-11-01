@@ -1,0 +1,39 @@
+{
+  "experiment_id": "E-EXP01-PROPAGATION-DYNAMICS",
+  "experiment_number": 1,
+  "claim": "C1",
+  "description": "Zero-day detection propagation dynamics across Dirichlet non-IID regimes (alpha in {0.1, 0.5, 1.0, 10.0}).",
+  "datasets": [
+    {
+      "name": "CSE-CIC-IDS2018",
+      "path": "datasets/processed/cleaned_cic2018.parquet"
+    },
+    {
+      "name": "ToN-IoT",
+      "path": "datasets/processed/cleaned_ton_iot.parquet"
+    },
+    {
+      "name": "UNSW-NB15",
+      "path": "datasets/processed/cleaned_unsw_nb15.parquet"
+    },
+    {
+      "name": "NSL-KDD",
+      "path": "datasets/processed/cleaned_nsl_kdd.parquet"
+    }
+  ],
+  "configuration": {
+    "N": 10,
+    "rounds": 50,
+    "t0": 20,
+    "E": 3,
+    "gamma": 0.15,
+    "seed": 42
+  },
+  "expected_output": "results/figures/fig_propagation.pdf; results/figures/fig1a_propagation.pdf",
+  "expected_properties": {
+    "tau_080_typical_rounds": 4.5,
+    "asymptotic_recall": 0.96
+  },
+  "reproducibility_level": "R3",
+  "script": "scripts/smoke.sh"
+}

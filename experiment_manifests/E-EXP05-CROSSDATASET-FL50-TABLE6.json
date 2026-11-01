@@ -1,0 +1,39 @@
+{
+  "experiment_id": "E-EXP05-CROSSDATASET-FL50-TABLE6",
+  "experiment_number": 5,
+  "claim": "C1",
+  "description": "Full 50-round FL sweeps across all 4 intrusion datasets and 16 attack families.",
+  "datasets": [
+    {
+      "name": "CSE-CIC-IDS2018",
+      "path": "datasets/processed/cleaned_cic2018.parquet"
+    },
+    {
+      "name": "ToN-IoT",
+      "path": "datasets/processed/cleaned_ton_iot.parquet"
+    },
+    {
+      "name": "UNSW-NB15",
+      "path": "datasets/processed/cleaned_unsw_nb15.parquet"
+    },
+    {
+      "name": "NSL-KDD",
+      "path": "datasets/processed/cleaned_nsl_kdd.parquet"
+    }
+  ],
+  "configuration": {
+    "N": 10,
+    "alpha": 0.5,
+    "t0": 20,
+    "rounds": 50,
+    "seed": 42
+  },
+  "expected_output": "results/metrics/fl50_4datasets_summary.csv; results/tables/table_fl50_4datasets.tex; results/figures/fig_crossdataset_fl50.pdf; results/logs/fl50_4datasets.log",
+  "expected_properties": {
+    "volumetric_tau_080_max": 4.4,
+    "stealthy_tau_080_min": 5.6,
+    "catastrophic_forgetting_max": 0.0092
+  },
+  "reproducibility_level": "R3",
+  "script": "scripts/run_50fl_4datasets.py"
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package fedids.v1;
+
+// What an adversary observes in one round (inputs to attribution attacks).
+enum AdversaryKind {
+  ADVERSARY_KIND_UNSPECIFIED = 0;
+  ADVERSARY_KIND_SERVER = 1;  // sees individual updates (no secure aggregation)
+  ADVERSARY_KIND_PEER = 2;    // sees only consecutive global models
+}
+
+message Observation {
+  string run_id = 1;
+  AdversaryKind adversary = 2;
+  uint32 round = 3;
+  int32 site = 4;            // -1 when the adversary cannot see the sender
+  string update_ref = 5;     // path to the update or global-model difference
+}
